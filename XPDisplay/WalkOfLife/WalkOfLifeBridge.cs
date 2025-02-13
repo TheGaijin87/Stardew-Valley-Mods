@@ -39,7 +39,7 @@ namespace Shockah.XPDisplay.WalkOfLife
 			SetupIfNeeded();
 			if (Api is null)
 				return null;
-			return (Game1.content.Load<Texture2D>("DaLion.Professions/SkillBars"), new(0, 0, 7, 9));
+			return (Game1.content.Load<Texture2D>("DaLion.Professions_SkillBars"), new(0, 0, 7, 9));
 		}
 
 		public static (Texture2D, Rectangle)? GetExtendedBigBar()
@@ -47,7 +47,7 @@ namespace Shockah.XPDisplay.WalkOfLife
 			SetupIfNeeded();
 			if (Api is null)
 				return null;
-			return (Game1.content.Load<Texture2D>("DaLion.Professions/SkillBars"), new(16, 0, 13, 9));
+			return (Game1.content.Load<Texture2D>("DaLion.Professions_SkillBars"), new(16, 0, 13, 9));
 		}
 	}
 }
