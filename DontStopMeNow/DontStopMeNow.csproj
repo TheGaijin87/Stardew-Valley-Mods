@@ -10,7 +10,11 @@
 		<Reference Include="Newtonsoft.Json" HintPath="$(GamePath)/smapi-internal/Newtonsoft.Json.dll" Private="false" />
 	</ItemGroup>
 <ItemGroup>
-  <Reference Include="Stardew Valley">
+  <Reference Include="StardewValley">
+    <HintPath>../Stardew Valley.dll</HintPath>
+    <Private>false</Private>
+  </Reference>
+  <Reference Include="StardewModdingAPI">
     <HintPath>../Stardew Valley.dll</HintPath>
     <Private>false</Private>
   </Reference>
