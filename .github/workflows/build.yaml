@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4 # Updated to v4
+        uses: actions/checkout@v4
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v4 # Updated to v4
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 6.0.x
 
@@ -18,10 +18,12 @@ jobs:
         run: dotnet restore
 
       - name: Build
-        run: dotnet build --configuration Release
+        # This line tells the build to use a "dummy" path so it doesn't crash 
+        # looking for the real game folder on the server.
+        run: dotnet build --configuration Release /p:GamePath="/home/runner/work/fake-stardew"
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v4 # THIS IS THE FIX
+        uses: actions/upload-artifact@v4
         with:
           name: DontStopMeNow-Build
           path: bin/Release/net6.0/
