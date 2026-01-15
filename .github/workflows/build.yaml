@@ -20,7 +20,7 @@ jobs:
 
       - name: Build
         # Point this exactly to your mod's folder and provide the GamePath
-        run: dotnet build DontStopMeNow/DontStopMeNow.csproj --configuration Release /p:GamePath="../"
+        run: dotnet build DontStopMeNow/DontStopMeNow.csproj --configuration Release /p:GamePath="../" /p:IgnoreSmapiCheck=true /p:IgnoreGameDetector=true
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
