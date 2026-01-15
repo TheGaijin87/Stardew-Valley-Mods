@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4 # Updated to v4
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4 # Updated to v4
         with:
           dotnet-version: 6.0.x
 
@@ -21,7 +21,7 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4 # THIS IS THE FIX
         with:
           name: DontStopMeNow-Build
           path: bin/Release/net6.0/
