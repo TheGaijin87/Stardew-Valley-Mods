@@ -11,7 +11,7 @@
 	</ItemGroup>
 <ItemGroup>
   <Reference Include="Stardew Valley">
-    <HintPath>Stardew Valley.dll</HintPath>
+    <HintPath>../Stardew Valley.dll</HintPath>
     <Private>false</Private>
   </Reference>
 </ItemGroup>
