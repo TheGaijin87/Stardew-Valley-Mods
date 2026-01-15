@@ -17,10 +17,8 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore
 
-      - name: Build
-        # This line tells the build to use a "dummy" path so it doesn't crash 
-        # looking for the real game folder on the server.
-        run: dotnet build --configuration Release /p:GamePath="/home/runner/work/fake-stardew"
+- name: Build
+  run: dotnet build --configuration Release /p:GamePath="./"
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
