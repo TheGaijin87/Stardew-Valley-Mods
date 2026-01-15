@@ -1,25 +1,21 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-	<Import Project="..\Configuration.props" />
-	<PropertyGroup>
-<EnableModDeploy>false</EnableModDeploy>
-  <EnableModZip>false</EnableModZip>
-  <IgnoreModBuildChecks>true</IgnoreModBuildChecks>
-  <GamePath>$(MSBuildProjectDirectory)</GamePath>
-		<RootNamespace>Shockah.DontStopMeNow</RootNamespace>
-		<Version>2.0.0</Version>
-	</PropertyGroup>
-	<ItemGroup>
-		<ProjectReference Include="..\Kokoro\Kokoro.csproj" Private="false" />
-		<Reference Include="Newtonsoft.Json" HintPath="$(GamePath)/smapi-internal/Newtonsoft.Json.dll" Private="false" />
-	</ItemGroup>
-<ItemGroup>
-  <Reference Include="StardewValley">
-    <HintPath>../Stardew Valley.dll</HintPath>
-    <Private>false</Private>
-  </Reference>
-  <Reference Include="StardewModdingAPI">
-    <HintPath>../Stardew Valley.dll</HintPath>
-    <Private>false</Private>
-  </Reference>
-</ItemGroup>
-</Project>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>DontStopMeNow</AssemblyName>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    
+    <EnableModDeploy>false</EnableModDeploy>
+    <EnableModZip>false</EnableModZip>
+    <ModBuildConfigLoaded>true</ModBuildConfigLoaded> 
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="StardewValley">
+      <HintPath>../Stardew Valley.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="StardewModdingAPI">
+      <HintPath>../Stardew Valley.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
